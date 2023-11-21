@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+pre{
+  font-family: Arial;
+}
+
+form {
+margin-top: 200px;
+  width: 400px;
+  margin: 0 auto;
+  border-color: aliceblue;
+}
+h1{
+    margin-left: 75px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="checkbox"],
+button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.checkbox-container label,
+.checkbox-container input[type="checkbox"]{
+  display: inline-block; 
+  margin-bottom: 10px; 
+  
+}
+input#name:invalid:focus{
+    border:1px solid red;
+}
+input#email:invalid:focus{
+    border:1px solid red;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(9, 144, 9);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+caption{
+    font-weight: bolder;
+    font-size: larger;
+    padding: 10px;
+}
+
+th, td {
+  border: 1px solid rgb(77, 69, 69);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: rgb(169, 155, 155);
+}
+    </style>
+</head>
+<body>
+    <body>
+        
+        <form id="registrationForm">
+            <h1>Registration Form</h1>
+        
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+      
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required><br><br>
+      
+          <label for="dob">DOB:</label>
+          <input type="date" id="dob" name="dob" required><br><br>
+      
+          <div class="checkbox-container">
+          <pre><label for="terms">Accept Terms and Conditions</label><input type="checkbox" id="terms" name="terms" required></pre>
+          
+        </div>
+      
+        <button type="submit">Submit</button>
+        </form>
+        <table id="data">
+            <caption>Entries</caption>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Dob</th>
+                <th>Accepted terms?</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+          </table>
+     <script src="./index.js"></script>
+</body>
+</html>
